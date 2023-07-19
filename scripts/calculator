@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Define the functions for the calculator.
+add() {
+  echo "Adding $1 and $2..."
+  sum=$(echo "$1 + $2" | bc -l)
+  echo "The sum is $sum"
+}
+
+subtract() {
+  echo "Subtracting $1 and $2..."
+  difference=$(echo "$1 - $2" | bc -l)
+  echo "The difference is $difference"
+}
+
+multiply() {
+  echo "Multiplying $1 and $2..."
+  product=$(echo "$1 * $2" | bc -l)
+  echo "The product is $product"
+}
+
+divide() {
+  echo "Dividing $1 and $2..."
+  quotient=$(echo "$1 / $2" | bc -l)
+  echo "The quotient is $quotient"
+}
+
+# Get the user's input.
+echo "What operation would you like to perform?"
+echo "1. Add"
+echo "2. Subtract"
+echo "3. Multiply"
+echo "4. Divide"
+read operation
+
+# Get the user's numbers.
+echo "Enter the first number:"
+read number1
+echo "Enter the second number:"
+read number2
+
+# Perform the operation.
+case $operation in
+  1) add $number1 $number2 ;;
+  2) subtract $number1 $number2 ;;
+  3) multiply $number1 $number2 ;;
+  4) divide $number1 $number2 ;;
+esac
+

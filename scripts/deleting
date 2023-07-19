@@ -1,0 +1,5 @@
+#!/bin/bash
+# Find all files with the extension .txt
+find . -name "*.txt"
+# Delete all files with the extension .txt
+rm -f *.txt

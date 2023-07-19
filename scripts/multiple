@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Set the number of files to create
+num_files=5
+
+# Set the base name for the files
+base_name="file"
+
+# Set the extension for the files
+extension=".txt"
+
+# Create the files
+for ((i=1; i<=num_files; i++))
+do
+    file_name="$base_name$i$extension"
+    touch "$file_name"
+    echo "Created file: $file_name"
+done
+
+echo "File creation complete."
+

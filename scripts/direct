@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the directory name from the user.
+echo "Enter the directory name:"
+read directory_name
+
+# Check if the directory exists.
+if [ -d "$directory_name" ]; then
+  echo "The directory $directory_name already exists."
+else
+  echo "The directory $directory_name does not exist."
+  echo "Creating the directory..."
+  mkdir "$directory_name"
+  echo "The directory $directory_name has been created."
+fi
+

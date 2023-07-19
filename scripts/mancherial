@@ -1,0 +1,10 @@
+#!/bin/bash
+#purpose :print a 
+#date:17-07-2
+hostname
+echo hello my name is $a
+echo
+echo what is your name?
+read b
+echo hello $b
+echo 
